@@ -41,10 +41,10 @@ p { text-wrap: pretty; }
 
 /* Portadas: las cuatro imágenes conservan su proporción 1440 × 379 */
 .portada-fotografica { height: min(379px, 26.32vw); display: flex; align-items: center; background-size: cover; background-repeat: no-repeat; background-position: center bottom; }
-.portada-inicio { justify-content: center; background-image: url("imagenes/portada-inicio.png"); }
-.portada-menu { background-image: url("imagenes/portada-menu.png"); }
-.portada-reservar { justify-content: center; background-image: url("imagenes/portada-reservar.png"); }
-.portada-nosotros { background-image: url("imagenes/portada-nosotros.png"); }
+.portada-inicio { justify-content: center; background-image: url("portada-inicio.png"); }
+.portada-menu { background-image: url("portada-menu.png"); }
+.portada-reservar { justify-content: center; background-image: url("portada-reservar.png"); }
+.portada-nosotros { background-image: url("portada-nosotros.png"); }
 .portada-inicio h1, .texto-portada { color: var(--dorado); font-family: Georgia, serif; font-weight: 400; line-height: 1.15; }
 .portada-inicio h1 { font-size: clamp(30px, 3.5vw, 50px); text-align: center; }
 .portada-inicio .texto-pequeno { font-size: .65em; }
@@ -115,7 +115,7 @@ p { text-wrap: pretty; }
 .formulario-reserva input, .formulario-reserva select, .formulario-reserva textarea, .formulario-giftcard input:not(.opcion-oculta), .formulario-giftcard textarea { display: block; width: 100%; border: 0; border-radius: 5px; background: #eae9e6; color: var(--texto-oscuro); }
 .formulario-reserva input, .formulario-reserva select { height: 54px; padding: 10px 24px; margin-bottom: 14px; font-size: 19px; }
 .formulario-reserva input[readonly] { cursor: pointer; }
-.formulario-reserva .selector-fecha input { padding-right: 48px; background-image: url("imagenes/calendario.svg"); background-repeat: no-repeat; background-position: right 18px center; background-size: 21px; }
+.formulario-reserva .selector-fecha input { padding-right: 48px; background-image: url("calendario.svg"); background-repeat: no-repeat; background-position: right 18px center; background-size: 21px; }
 .campos-turno { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .selector-fecha { position: relative; }
 .calendario-reserva[hidden], .error-fecha[hidden] { display: none; }
@@ -171,7 +171,7 @@ input::placeholder, textarea::placeholder { color: #99999c; font-style: italic; 
 .opcion-oculta:focus-visible + label { outline: 3px solid #5c4625; outline-offset: 3px; }
 .formulario-giftcard > label { margin-top: 42px; }
 .formulario-giftcard input:not(.opcion-oculta) { height: 54px; padding: 10px 25px; font-size: 20px; }
-.formulario-giftcard .selector-fecha input { padding-right: 48px; background-image: url("imagenes/calendario.svg"); background-repeat: no-repeat; background-position: right 18px center; background-size: 21px; cursor: pointer; }
+.formulario-giftcard .selector-fecha input { padding-right: 48px; background-image: url("calendario.svg"); background-repeat: no-repeat; background-position: right 18px center; background-size: 21px; cursor: pointer; }
 .campos-entrega { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; margin-top: 54px; }
 .campos-entrega input { max-width: 260px; }
 .formulario-giftcard textarea { min-height: 156px; padding: 16px 25px; font-size: 20px; resize: vertical; }

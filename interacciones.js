@@ -18,10 +18,10 @@ navegacion.querySelectorAll("a").forEach((enlace) => {
 
 // Tienda de sake: el carrito se guarda en este navegador para la demostración.
 const productosSake = {
-  junmai: { nombre: "Junmai", precio: 28000, imagen: "imagenes/sake-junmai.svg" },
-  ginjo: { nombre: "Ginjo", precio: 34000, imagen: "imagenes/sake-ginjo.svg" },
-  daiginjo: { nombre: "Daiginjo", precio: 46000, imagen: "imagenes/sake-daiginjo.svg" },
-  nigori: { nombre: "Nigori", precio: 32000, imagen: "imagenes/sake-nigori.svg" }
+  junmai: { nombre: "Junmai", precio: 28000, imagen: "sake-junmai.svg" },
+  ginjo: { nombre: "Ginjo", precio: 34000, imagen: "sake-ginjo.svg" },
+  daiginjo: { nombre: "Daiginjo", precio: 46000, imagen: "sake-daiginjo.svg" },
+  nigori: { nombre: "Nigori", precio: 32000, imagen: "sake-nigori.svg" }
 };
 const claveCarrito = "shun-carrito-sake-v1";
 
