@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shun Omakase | Compra confirmada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&amp;family=Raleway:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="interacciones.js" defer></script>
+</head>
+<body>
+  <header class="encabezado-sitio">
+    <div class="contenido-encabezado">
+      <a class="marca" href="index.html" aria-label="Shun Omakase, ir al inicio"><img src="imagenes/logo.png" alt="Shun Omakase"></a>
+      <nav class="navegacion-principal" id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="reservar.html">Reservar</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+      </nav>
+      <div class="acciones-encabezado">
+        <a class="enlace-carrito" href="carrito.html" aria-label="Carrito, 0 productos">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 5.5h3.4l3.3 15h15.5l3-10.5H7.2"/><circle cx="12" cy="26" r="1.7"/><circle cx="23" cy="26" r="1.7"/></svg>
+          <span class="contador-carrito" aria-hidden="true">0</span>
+        </a>
+        <button class="boton-menu" type="button" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion-confirmacion" aria-labelledby="titulo-confirmacion">
+      <h1 id="titulo-confirmacion">¡Gracias por tu compra!</h1>
+      <p id="mensaje-confirmacion-compra">Pronto enviaremos la giftcard digital al correo electrónico indicado.<br>¡Esperamos que disfruten esta experiencia!</p>
+      <div class="acciones-confirmacion">
+        <a class="boton" href="index.html">Volver a inicio</a>
+        <a class="boton boton-contorno" href="index.html#contacto">Contáctanos</a>
+      </div>
+      <div class="galeria-confirmacion" aria-label="Imágenes de la experiencia Shun Omakase">
+        <img src="imagenes/compra-1.png" alt="Selección de piezas de sushi en una caja de madera" loading="lazy">
+        <img src="imagenes/compra-2.png" alt="Una bebida servida en una copa" loading="lazy">
+        <img src="imagenes/compra-3.png" alt="Un itamae presenta una pieza de sushi" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-sitio">
+    <div class="contenido-pie">
+      <a href="index.html" aria-label="Shun Omakase, ir al inicio"><img class="logo-pie" src="imagenes/logo.png" alt="Shun Omakase"></a>
+      <p>© Shun Omakase, 2026</p>
+      <div class="enlaces-redes" aria-label="Contacto y redes">
+        <span title="Instagram"><img src="imagenes/instagram.svg" alt="Instagram"></span>
+        <a href="https://wa.me/541165927291" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp"><img src="imagenes/whatsapp.svg" alt=""></a>
+        <a href="mailto:hola@shunomakase.com" aria-label="Enviar un correo"><img src="imagenes/correo.svg" alt=""></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

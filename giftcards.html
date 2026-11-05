@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shun Omakase | Giftcards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&amp;family=Raleway:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="interacciones.js" defer></script>
+</head>
+<body>
+  <header class="encabezado-sitio">
+    <div class="contenido-encabezado">
+      <a class="marca" href="index.html" aria-label="Shun Omakase, ir al inicio"><img src="imagenes/logo.png" alt="Shun Omakase"></a>
+      <nav class="navegacion-principal" id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="reservar.html">Reservar</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+      </nav>
+      <div class="acciones-encabezado">
+        <a class="enlace-carrito" href="carrito.html" aria-label="Carrito, 0 productos">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 5.5h3.4l3.3 15h15.5l3-10.5H7.2"/><circle cx="12" cy="26" r="1.7"/><circle cx="23" cy="26" r="1.7"/></svg>
+          <span class="contador-carrito" aria-hidden="true">0</span>
+        </a>
+        <button class="boton-menu" type="button" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion-giftcards" aria-labelledby="titulo-giftcard">
+      <div class="distribucion-giftcards">
+        <img class="foto-giftcard" src="imagenes/giftcard.png" alt="Presentación de la gift card de Shun Omakase con flores y un sobre">
+        <div class="contenido-giftcard">
+          <h1 id="titulo-giftcard">Un regalo flexible, diferente y pensado<br class="salto-escritorio"> para disfrutar de la cocina de Shun.</h1>
+          <form class="formulario-giftcard" id="formulario-giftcard" aria-label="Compra simulada de una gift card">
+            <fieldset class="grupo-opciones">
+              <legend>Valor:</legend>
+              <div class="opciones-valor">
+                <input class="opcion-oculta" type="radio" name="valor" id="valor-20" value="20% off" required><label for="valor-20">20% off</label>
+                <input class="opcion-oculta" type="radio" name="valor" id="valor-50" value="50% off" required><label for="valor-50">50% off</label>
+                <input class="opcion-oculta" type="radio" name="valor" id="valor-completa" value="Experiencia completa" required><label for="valor-completa">Experiencia completa</label>
+              </div>
+            </fieldset>
+            <fieldset class="grupo-opciones">
+              <legend>¿Para quién es?</legend>
+              <div class="opciones-destinatario">
+                <input class="opcion-oculta" type="radio" name="destino" id="destino-otra" value="otra persona" required><label for="destino-otra">Para otra persona</label>
+                <input class="opcion-oculta" type="radio" name="destino" id="destino-propio" value="para mí" required><label for="destino-propio">Para mí</label>
+              </div>
+            </fieldset>
+            <label for="correo-destinatario" id="etiqueta-correo">Correo electrónico del destinatario:</label>
+            <input id="correo-destinatario" name="correo-destinatario" type="email" placeholder="Escriba aquí..." required>
+            <label for="nombre-destinatario" id="etiqueta-nombre">Nombre del destinatario:</label>
+            <input id="nombre-destinatario" name="nombre-destinatario" type="text" placeholder="Escriba aquí..." required>
+            <div class="campos-entrega">
+              <div class="selector-fecha">
+                <label for="fecha-entrega">Fecha de entrega:</label>
+                <input id="fecha-entrega" name="fecha-entrega" type="text" placeholder="Elegí una fecha" readonly required aria-haspopup="dialog" aria-controls="calendario-entrega" aria-expanded="false" aria-errormessage="error-fecha-entrega">
+                <div class="calendario-reserva" id="calendario-entrega" role="dialog" aria-label="Elegir fecha de entrega" hidden>
+                  <div class="cabecera-calendario">
+                    <button type="button" id="mes-anterior-entrega" aria-label="Mes anterior">‹</button>
+                    <strong id="mes-calendario-entrega" aria-live="polite"></strong>
+                    <button type="button" id="mes-siguiente-entrega" aria-label="Mes siguiente">›</button>
+                  </div>
+                  <div class="dias-semana" aria-hidden="true"><span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sá</span><span>Do</span></div>
+                  <div class="dias-calendario" id="dias-calendario-entrega"></div>
+                </div>
+                <p class="error-fecha" id="error-fecha-entrega" role="alert" hidden></p>
+              </div>
+              <div><label for="hora-entrega">Horario de entrega:</label><input id="hora-entrega" name="hora-entrega" type="time" required></div>
+            </div>
+            <label for="mensaje-giftcard">Mensaje:</label>
+            <textarea id="mensaje-giftcard" name="mensaje" placeholder="Escriba aquí..." required></textarea>
+            <p class="aclaracion-giftcard">*Giftcard digital</p>
+            <button class="boton-comprar" type="submit">Comprar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-sitio">
+    <div class="contenido-pie">
+      <a href="index.html" aria-label="Shun Omakase, ir al inicio"><img class="logo-pie" src="imagenes/logo.png" alt="Shun Omakase"></a>
+      <p>© Shun Omakase, 2026</p>
+      <div class="enlaces-redes" aria-label="Contacto y redes">
+        <span title="Instagram"><img src="imagenes/instagram.svg" alt="Instagram"></span>
+        <a href="https://wa.me/541165927291" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp"><img src="imagenes/whatsapp.svg" alt=""></a>
+        <a href="mailto:hola@shunomakase.com" aria-label="Enviar un correo"><img src="imagenes/correo.svg" alt=""></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
