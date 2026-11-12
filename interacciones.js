@@ -1,4 +1,3 @@
-// Menú de navegación en celular.
 const botonMenu = document.querySelector(".boton-menu");
 const navegacion = document.querySelector(".navegacion-principal");
 
@@ -171,7 +170,7 @@ if (formularioReserva) {
     botonAnterior.disabled = mesVisible <= new Date(diaDeHoy().getFullYear(), diaDeHoy().getMonth(), 1);
     diasCalendario.replaceChildren();
 
-    // La grilla comienza en lunes; getDay() comienza en domingo.
+  
     const espacios = (new Date(anio, mes, 1).getDay() + 6) % 7;
     for (let i = 0; i < espacios; i++) {
       const espacio = document.createElement("span");
