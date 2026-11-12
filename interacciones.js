@@ -16,12 +16,12 @@ navegacion.querySelectorAll("a").forEach((enlace) => {
   });
 });
 
-// Tienda de sake: el carrito se guarda en este navegador para la demostración.
+
 const productosSake = {
-  junmai: { nombre: "Junmai", precio: 28000, imagen: "sake-junmai.svg" },
-  ginjo: { nombre: "Ginjo", precio: 34000, imagen: "sake-ginjo.svg" },
-  daiginjo: { nombre: "Daiginjo", precio: 46000, imagen: "sake-daiginjo.svg" },
-  nigori: { nombre: "Nigori", precio: 32000, imagen: "sake-nigori.svg" }
+  junmai: { nombre: "Junmai", precio: 28000, imagen: "imagenes/sake-junmai.svg" },
+  ginjo: { nombre: "Ginjo", precio: 34000, imagen: "imagenes/sake-ginjo.svg" },
+  daiginjo: { nombre: "Daiginjo", precio: 46000, imagen: "imagenes/sake-daiginjo.svg" },
+  nigori: { nombre: "Nigori", precio: 32000, imagen: "imagenes/sake-nigori.svg" }
 };
 const claveCarrito = "shun-carrito-sake-v1";
 
@@ -116,7 +116,9 @@ if (listaCarrito) {
     mostrarCarrito();
   });
 
-  document.querySelector("#formulario-carrito").addEventListener("submit", (evento) => {
+  const formularioCarrito = document.querySelector("#formulario-carrito");
+  formularioCarrito.setAttribute("aria-label", "Confirmar compra");
+  formularioCarrito.addEventListener("submit", (evento) => {
     evento.preventDefault();
     if (Object.keys(leerCarrito()).length === 0) return;
     guardarCarrito({});
@@ -128,10 +130,10 @@ if (listaCarrito) {
 
 const mensajeConfirmacionCompra = document.querySelector("#mensaje-confirmacion-compra");
 if (mensajeConfirmacionCompra && new URLSearchParams(window.location.search).get("tipo") === "sake") {
-  mensajeConfirmacionCompra.textContent = "Tu compra de sake quedó confirmada en esta demostración. ¡Gracias por elegir Shun!";
+  mensajeConfirmacionCompra.textContent = "Tu compra de sake quedó confirmada. ¡Gracias por elegir Shun!";
 }
 
-// Las confirmaciones son parte de una demostración: no se envían datos.
+
 const formularioReserva = document.querySelector("#formulario-reserva");
 if (formularioReserva) {
   const campoFecha = document.querySelector("#fecha");
