@@ -17,7 +17,7 @@ navegacion.querySelectorAll("a").forEach((enlace) => {
 
 
 const productosSake = {
-  junmai: { nombre: "Junmai", precio: 28000, imagen: "ake-junmai.svg" },
+  junmai: { nombre: "Junmai", precio: 28000, imagen: "sake-junmai.svg" },
   ginjo: { nombre: "Ginjo", precio: 34000, imagen: "sake-ginjo.svg" },
   daiginjo: { nombre: "Daiginjo", precio: 46000, imagen: "sake-daiginjo.svg" },
   nigori: { nombre: "Nigori", precio: 32000, imagen: "sake-nigori.svg" }
